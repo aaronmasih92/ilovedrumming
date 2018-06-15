@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drummingblog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <link rel="stylesheet" href="/assets/app.css">
+
+  </head>
+<body>
+<div class="container">
+<nav>
+
+<div class="nav-wrapper teal lighten-2">
+  <ul>
+  <li><%= link_to 'Home', root_path %> </li>
+  <li><%= link_to 'Education', posts_path(category: 'Education') %> </li>
+  <li> <%= link_to 'Performance', posts_path(category: 'Performance') %>  </li>
+  <li> <%= link_to 'Products', posts_path(category: 'Products') %> </li>
+  <% if user_signed_in? %>
+  <li><%= link_to 'Sign-Out', destroy_user_session_path, method: :delete	 %>	 </li>
+  <li><%= link_to 'Profile', users_profile_path	%>	 </li>
+
+  <% else %>
+  <li><%= link_to 'Sign-in', new_user_session_path %>	 </li>
+  <li><%= link_to 'Sign-up', new_user_registration_path	%>	 </li>
+ 
+<% end %>
+
+  </ul>
+  </div>
+  </nav>
+
+
+<div class="row">
+<br>
+ <h2 class="col s7 push-s5">I Love Drumming.Com</h2>
+<%= image_tag("blackdrum.png", :class => "col s5 pull-s7 img-responsive") %>
+<center>
+<p>A site by drummers, for drummers.</p>
+</center>
+</div>
+</div>
+
+
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <%= yield %>
+  </div>
+  </body>
+</html>
