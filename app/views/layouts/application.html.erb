@@ -7,7 +7,11 @@
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
     <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag    "/assets/app" %>
+
     <%= javascript_include_tag "application" %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
     <%= csrf_meta_tags %>
   </head>
@@ -17,7 +21,7 @@
 
 
 <nav>
-
+<div class="nav-wrapper teal lighten-2">
   <ul class="menu">
   <li><%= link_to 'Home', root_path %> </li>
   <li><%= link_to 'Education', posts_path(category: 'Education') %> </li>
@@ -34,12 +38,13 @@
 <% end %>
 
   </ul>
+  </div>
   </nav>
 
 
 <div class="row">
 <br>
- <h2 class="col s7 push-s5">I Love Drumming.Com</h2>
+ <h2 id="site-name" class="col s7 push-s5">I Love Drumming.Com</h2>
 <%= image_tag("blackdrum.png", :class => "col s5 pull-s7 img-responsive") %>
 <center>
 <p>A site by drummers, for drummers.</p>

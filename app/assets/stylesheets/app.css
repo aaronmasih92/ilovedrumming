@@ -13,11 +13,11 @@
 
 }
 select{
-    display: block;
+    display: block !important;
    }
 
 body {
-       background-color: lightcyan;
+    background-color: lightcyan;
 }
 
 #site-name {
