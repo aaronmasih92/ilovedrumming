@@ -18,10 +18,11 @@
 
   <div class="field">
     <%= form.label :content %>
-    <%= form.text_area :content %>
+    <%= form.cktext_area :content %>
   </div>
 
   <div class="field">
+  Please select a category
     <%= form.label :category %>
     <%= form.select :category, ['Education', 'Performance', 'Products'], { :class => "input-field"} %>
     </div>

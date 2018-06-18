@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Drummingblog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-
-    <link rel="stylesheet" href="/assets/app.css">
-
   </head>
-<body>
-<div class="container">
+
+  <body>
+
+
+
 <nav>
 
-<div class="nav-wrapper teal lighten-2">
-  <ul>
+  <ul class="menu">
   <li><%= link_to 'Home', root_path %> </li>
   <li><%= link_to 'Education', posts_path(category: 'Education') %> </li>
   <li> <%= link_to 'Performance', posts_path(category: 'Performance') %>  </li>
@@ -35,7 +34,6 @@
 <% end %>
 
   </ul>
-  </div>
   </nav>
 
 
@@ -50,10 +48,6 @@
 </div>
 
 
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-  <%= yield %>
-  </div>
+    <%= yield %>
   </body>
 </html>

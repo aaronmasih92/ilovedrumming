@@ -4,10 +4,24 @@
 
 .nav-wrapper {
     padding-top: 20px;
+    padding-left: 15%;
 
 }
 
 .comment {
     border: 3px black solid;
+
+}
+select{
+    display: block;
+   }
+
+body {
+       background-color: lightcyan;
+}
+
+#site-name {
+    padding-top: 8%;
+
 
 }
