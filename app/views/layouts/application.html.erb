@@ -4,10 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "iLoveDrumming" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= stylesheet_link_tag    "/assets/app" %>
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
 
     <%= javascript_include_tag "application" %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
@@ -43,15 +44,15 @@
 
 
 <div class="row">
-<br>
  <h2 id="site-name" class="col s7 push-s4">I Love Drumming.Com</h2>
-<%= image_tag("drummer.png", style: 'width: 300px; height: 300px', :class => "col s5 pull-s6") %>
+<%= image_tag("drummer.png", style: 'width: 300px; height: 300px', :class => "col s5 pull-s5") %>
 <center>
-<p>A site by drummers, for drummers.</p>
 </center>
 </div>
 </div>
-
+<center>
+<p>A site by drummers, for drummers.</p>
+</center>
 
     <%= yield %>
   </body>
