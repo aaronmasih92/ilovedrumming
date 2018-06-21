@@ -77,3 +77,4 @@ gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
 gem "fog-aws"
+gem 'sprockets', '~> 3.7.2'
