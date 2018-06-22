@@ -5,14 +5,15 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+
     category = params[:category]
     if category.present?
+      @category = category
       @posts = Post.where(category: category)
       @is_indexpage = false
     else
     @posts = Post.all.order(created_at: :desc)
     @is_indexpage = true 
-
     end
   end
 
