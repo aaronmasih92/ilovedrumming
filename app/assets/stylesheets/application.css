@@ -23,3 +23,7 @@
     margin: 1em 0;
     padding: 0;
 }
+label {
+    color: black !important;
+    font-size: 1.2em !important;
+}
