@@ -8,5 +8,5 @@ CarrierWave.configure do |config|
     }
     config.fog_directory  = 'aaronmasihtest'                                   # required
     config.fog_public     = false                                                 # optional, defaults to true
-    config.fog_attributes = { cache_control: "public, max-age=#{365.days.to_i}" } # optional, defaults to {}
+    config.fog_attributes = { 'Cache-Control'=>'max-age=315576000' } # optional, defaults to {}
   end
